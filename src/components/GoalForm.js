@@ -1,4 +1,5 @@
 import React from 'react';
+import GoalBtn from './GoalBtn';
 import './GoalForm.css';
 
 const GoalForm = () => {
@@ -6,9 +7,12 @@ const GoalForm = () => {
 		<form>
 			<div className='form-control'>
 				<label className='form-control__label'>Course Goal</label>
-				<input className='form-control__input' type={'text'} placeholder='Type your goal'></input>
+				<input
+					className='form-control__input'
+					type={'text'}
+					placeholder='Type your goal'></input>
 			</div>
-			<button className='button' type='submit'>Add Goal</button>
+			<GoalBtn />
 		</form>
 	);
 };
