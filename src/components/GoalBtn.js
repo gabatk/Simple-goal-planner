@@ -1,8 +1,7 @@
 import React from 'react';
 import './GoalBtn.css';
 
-const GoalBtn = (props) => {
-	
+const GoalBtn = props => {
 	return (
 		<button className='button' type='submit' onClick={props.submitBtn}>
 			Add Goal

@@ -21,13 +21,19 @@ const App = () => {
 		});
 	};
 
+	const deleteGoalHandler = elementToDelete => {
+		setGoals(prevGoals => {
+			return prevGoals.filter(element => element.id !== elementToDelete);
+		});
+	};
+
 	return (
 		<div>
 			<section id='goal-form'>
 				<GoalForm onAddGoal={addGoal} />
 			</section>
 			<section id='goals'>
-				<GoalsList items={goals}/>
+				<GoalsList items={goals} onDeleteItem={deleteGoalHandler} />
 			</section>
 		</div>
 	);

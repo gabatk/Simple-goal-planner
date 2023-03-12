@@ -6,7 +6,7 @@ const GoalsList = props => {
 		<div>
 			<ul>
 				{props.items.map(item => (
-					<GoalItem key={item.id} id={item.id}>
+					<GoalItem key={item.id} id={item.id} onDelete={props.onDeleteItem}>
 						{item.text}
 					</GoalItem>
 				))}

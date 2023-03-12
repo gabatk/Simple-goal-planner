@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import GoalBtn from './GoalBtn';
 import './GoalForm.css';
 
-const GoalForm = (props) => {
-    const [inputValue, setInputValue] = useState('');
+const GoalForm = props => {
+	const [inputValue, setInputValue] = useState('');
 
-const changeInputValue = (event) => {
-    setInputValue(event.target.value)    
-}
+	const changeInputValue = event => {
+		setInputValue(event.target.value);
+	};
 
-    const submitBtnHandler = (event) => {
-        event.preventDefault();
-        props.onAddGoal(inputValue);
-        	}
+	const submitBtnHandler = event => {
+		event.preventDefault();
+		props.onAddGoal(inputValue);
+	};
 
 	return (
 		<form>
@@ -21,9 +21,10 @@ const changeInputValue = (event) => {
 				<input
 					className='form-control__input'
 					type={'text'}
-					placeholder='Type your goal' onChange={changeInputValue}></input>
+					placeholder='Type your goal'
+					onChange={changeInputValue}></input>
 			</div>
-			<GoalBtn submitBtn={submitBtnHandler}/>
+			<GoalBtn submitBtn={submitBtnHandler} />
 		</form>
 	);
 };
