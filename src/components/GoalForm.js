@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GoalBtn from './GoalBtn';
 import './GoalForm.css';
 
-const GoalForm = () => {
+const GoalForm = (props) => {
     const [inputValue, setInputValue] = useState('');
 
 const changeInputValue = (event) => {
@@ -12,7 +12,7 @@ const changeInputValue = (event) => {
     const submitBtnHandler = (event) => {
         event.preventDefault();
         props.onAddGoal(inputValue);
-	}
+        	}
 
 	return (
 		<form>
