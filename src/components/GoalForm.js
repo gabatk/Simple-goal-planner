@@ -24,11 +24,8 @@ const GoalForm = props => {
 
 	return (
 		<form>
-			<div className='form-control invalid'>
-				<label
-					className='form-control__label'>
-					Course Goal
-				</label>
+			<div className={`form-control ${!isValid ? 'invalid' : ''}`}>
+				<label className='form-control__label'>Course Goal</label>
 				<input
 					className='form-control__input'
 					type={'text'}
