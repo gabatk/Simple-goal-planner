@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import GoalBtn from './GoalBtn';
-import './GoalForm.css';
+// import './GoalForm.css';
+import styles from './GoalForm.module.css';
 
 const GoalForm = props => {
 	const [inputValue, setInputValue] = useState('');
@@ -23,11 +24,24 @@ const GoalForm = props => {
 	};
 
 	return (
+		// <form>
+		// 	{/* <div className={`form-control ${!isValid ? 'invalid' : ''}`}> */}
+		// 		<label className='form-control__label'>Course Goal</label>
+		// 		<input
+		// 			className='form-control__input'
+		// 			type={'text'}
+		// 			placeholder='Type your goal'
+		// 			onChange={changeInputValue}></input>
+		// 	</div>
+		// 	<GoalBtn submitBtn={submitBtnHandler} />
+		// </form>
+
 		<form>
-			<div className={`form-control ${!isValid ? 'invalid' : ''}`}>
-				<label className='form-control__label'>Course Goal</label>
+			<div
+				className={`${styles['form-control']} ${!isValid && styles.invalid}`}>
+				<label className={styles['form-control__label']}>Course Goal</label>
 				<input
-					className='form-control__input'
+					className={styles['form-control__input']}
 					type={'text'}
 					placeholder='Type your goal'
 					onChange={changeInputValue}></input>
